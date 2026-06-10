@@ -40,21 +40,26 @@ distrito = st.sidebar.selectbox(
     ]["Distrito"].dropna().unique())
 )
 
-conglomerado = st.sidebar.selectbox(
+""" conglomerado = st.sidebar.selectbox(
     "Conglomerado",
     sorted(data[
         (data["Departamento"] == departamento) &
         (data["Provincia"] == provincia) &
         (data["Distrito"] == distrito)
     ]["Conglomerado"].dropna().unique())
+) """
+
+conglomerado = st.sidebar.text_input(
+    "Ingrese el conglomerado",
+    value=""
 )
 
 fila = data[
     (data["Departamento"] == departamento) &
     (data["Provincia"] == provincia) &
     (data["Distrito"] == distrito) &
-    (data["Conglomerado"] == conglomerado)
-].sort_values(["Año", "Meses"]).tail(1)
+    (data["Conglomerado"].astype(str) == str(conglomerado))
+]
 
 if st.sidebar.button("Calcular probabilidad"):
 
