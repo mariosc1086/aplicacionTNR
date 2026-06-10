@@ -81,7 +81,7 @@ if st.sidebar.button("Calcular probabilidad"):
 
         col1.metric(
             "Probabilidad TNR Alta",
-            f"{resultado['probabilidad_porcentaje']}%"
+            f"{round(resultado['probabilidad_porcentaje'],2)}%"
         )
 
         col2.metric(
