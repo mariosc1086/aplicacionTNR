@@ -12,7 +12,7 @@ st.title("Sistema Inteligente de Alerta Temprana de TNR")
 st.write("Aplicación para estimar la probabilidad de TNR alta por conglomerado.")
 
 # Cargar base
-data = pd.read_csv("data/data_tnr.csv")
+data = pd.read_csv("data/data_tnr_final.csv")
 
 # Renombrar columnas si es necesario
 data = data.rename(columns={
