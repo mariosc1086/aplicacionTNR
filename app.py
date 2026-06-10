@@ -40,15 +40,6 @@ distrito = st.sidebar.selectbox(
     ]["Distrito"].dropna().unique())
 )
 
-""" conglomerado = st.sidebar.selectbox(
-    "Conglomerado",
-    sorted(data[
-        (data["Departamento"] == departamento) &
-        (data["Provincia"] == provincia) &
-        (data["Distrito"] == distrito)
-    ]["Conglomerado"].dropna().unique())
-) """
-
 conglomerado = st.sidebar.text_input(
     "Ingrese el conglomerado",
     value=""
